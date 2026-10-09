@@ -36,6 +36,7 @@ const WHATSAPP_URL =
 const MAPS_URL = "https://maps.google.com/?cid=14929066581155458468";
 const WAZE_URL = "https://waze.com/ul?ll=-3.8017977,-38.5344583&navigate=yes";
 const INSTAGRAM_URL = "https://instagram.com/selectaodonto";
+const LOGO_SRC = "/logo.png";
 
 const SERVICES = [
   { icon: Sparkles, title: "Limpeza e Profilaxia", desc: "Prevenção e saúde bucal em dia, com cuidado e gentileza." },
@@ -172,9 +173,11 @@ function Index() {
       <header className="sticky top-0 z-40 border-b bg-card/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <a href="#" className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
-              <Smile className="h-6 w-6 text-primary-foreground" />
-            </div>
+            <img
+              src={LOGO_SRC}
+              alt="Logo Selecta Odonto"
+              className="h-10 w-10 rounded-full object-contain"
+            />
             <span className="font-display text-lg font-bold text-primary">Selecta Odonto</span>
           </a>
           <nav className="hidden items-center gap-6 md:flex">
@@ -579,9 +582,11 @@ function Index() {
           <div className="grid gap-8 md:grid-cols-3">
             <div>
               <div className="flex items-center gap-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent">
-                  <Smile className="h-5 w-5 text-accent-foreground" />
-                </div>
+                <img
+                  src={LOGO_SRC}
+                  alt="Logo Selecta Odonto"
+                  className="h-9 w-9 rounded-full object-contain"
+                />
                 <span className="font-display text-lg font-bold">Selecta Odonto</span>
               </div>
               <p className="mt-3 text-sm text-primary-foreground/70">
