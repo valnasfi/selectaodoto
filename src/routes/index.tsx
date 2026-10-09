@@ -70,11 +70,11 @@ const REVIEWS = [
 ];
 
 const PHOTOS = [
-  { src: "/images/foto-01.jpg", caption: "Nossa clínica" },
+  { src: "/images/foto-01.jpg", caption: "Sala de espera" },
   { src: "/images/foto-02.jpg", caption: "Recepção acolhedora" },
-  { src: "/images/foto-03.jpg", caption: "Estrutura moderna" },
-  { src: "/images/foto-04.jpg", caption: "Consultório equipado" },
-  { src: "/images/foto-05.jpg", caption: "Cuidado em cada detalhe" },
+  { src: "/images/foto-03.jpg", caption: "Consultório moderno" },
+  { src: "/images/foto-04.jpg", caption: "Ambiente confortável" },
+  { src: "/images/foto-05.jpg", caption: "Nossa recepção" },
   { src: "/images/foto-06.jpg", caption: "Selecta Odonto" },
   { src: "/images/foto-07.jpg", caption: "Nossa identidade" },
   { src: "/images/foto-08.jpg", caption: "Sorrisos que transformam" },
@@ -236,7 +236,7 @@ function Index() {
       <section className="relative overflow-hidden bg-primary">
         <div className="absolute inset-0 opacity-10">
           <img
-            src="/images/foto-02.jpg"
+            src="/images/foto-03.jpg"
             alt="Selecta Odonto — clínica odontológica no Passaré, Fortaleza"
             className="h-full w-full object-cover"
           />
