@@ -32,7 +32,7 @@ import {
  */
 
 const WHATSAPP_URL =
-  "https://api.whatsapp.com/send/?phone=5585984058781&text=Ol%C3%A1%2C+vim+pelo+site+da+Selecta+Odonto+e+quero+agendar&type=phone_number&app_absent=0";
+  "https://api.whatsapp.com/send/?phone=558584058781&text=Ol%C3%A1%2C+vim+pelo+site+da+Selecta+Odonto+e+quero+agendar+um+hor%C3%A1rio&type=phone_number&app_absent=0";
 const MAPS_URL = "https://maps.google.com/?cid=14929066581155458468";
 const WAZE_URL = "https://waze.com/ul?ll=-3.8017977,-38.5344583&navigate=yes";
 const INSTAGRAM_URL = "https://instagram.com/selectaodonto";
@@ -158,10 +158,10 @@ function Index() {
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const text = encodeURIComponent(
-      `Olá, sou ${nome || "paciente"} (${whats}), vim pelo site da Selecta Odonto e quero agendar`
+      `Olá, sou ${nome || "paciente"} (${whats}), vim pelo site da Selecta Odonto e quero agendar um horário`
     );
     window.open(
-      `https://api.whatsapp.com/send/?phone=5585984058781&text=${text}&type=phone_number&app_absent=0`,
+      `https://api.whatsapp.com/send/?phone=558584058781&text=${text}&type=phone_number&app_absent=0`,
       "_blank"
     );
   }
