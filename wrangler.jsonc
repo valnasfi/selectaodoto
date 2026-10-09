@@ -5,11 +5,8 @@
   "compatibility_date": "2026-10-06",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
-    "directory": "dist/client",
+    "directory": ".output/public",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application"
-  },
-  "build": {
-    "command": "bun install --frozen-lockfile && bun run build"
   }
 }
