@@ -172,13 +172,12 @@ function Index() {
       {/* HEADER */}
       <header className="sticky top-0 z-40 border-b bg-card/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-          <a href="#" className="flex items-center gap-2">
+          <a href="#" className="flex items-center">
             <img
               src={LOGO_SRC}
               alt="Logo Selecta Odonto"
-              className="h-10 w-10 rounded-full object-contain"
+              className="h-12 w-12 rounded-full object-contain"
             />
-            <span className="font-display text-lg font-bold text-primary">Selecta Odonto</span>
           </a>
           <nav className="hidden items-center gap-6 md:flex">
             {NAV.map((item) => (
