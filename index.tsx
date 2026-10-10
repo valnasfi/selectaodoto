@@ -36,9 +36,8 @@ const WHATSAPP_URL =
 const MAPS_URL = "https://maps.google.com/?cid=14929066581155458468";
 const WAZE_URL = "https://waze.com/ul?ll=-3.8017977,-38.5344583&navigate=yes";
 const INSTAGRAM_URL = "https://instagram.com/selectaodonto";
-const LOGO_SRC = "/logo-completa.png"; // logo completa (cabeçalho, fundo claro)
-const LOGO_LIGHT_SRC = "/logo-completa-branca.png"; // logo completa com texto branco (rodapé, fundo escuro)
-const LOGO_ICON_SRC = "/logo.png"; // só o ícone redondo (schema/SEO)
+const LOGO_SRC = "/logo-completa.png"; // logo completa (ícone + nome) — cabeçalho e schema
+const LOGO_LIGHT_SRC = "/logo-completa-branca.png"; // logo completa com texto branco — rodapé (fundo escuro)
 const SITE_URL = "https://selectaodonto.vnfdigital.com.br";
 const OG_IMAGE = `${SITE_URL}/images/foto-03.jpg`;
 
@@ -52,7 +51,7 @@ const SCHEMA_DENTIST = {
   name: "Selecta Odonto",
   url: SITE_URL,
   image: OG_IMAGE,
-  logo: `${SITE_URL}${LOGO_ICON_SRC}`,
+  logo: `${SITE_URL}${LOGO_SRC}`,
   description:
     "Clínica odontológica com atendimento humanizado no Passaré, Fortaleza: limpeza, facetas, implantes, canal, ortodontia e odontopediatria.",
   telephone: "+5585984058781",
