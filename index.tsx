@@ -36,7 +36,9 @@ const WHATSAPP_URL =
 const MAPS_URL = "https://maps.google.com/?cid=14929066581155458468";
 const WAZE_URL = "https://waze.com/ul?ll=-3.8017977,-38.5344583&navigate=yes";
 const INSTAGRAM_URL = "https://instagram.com/selectaodonto";
-const LOGO_SRC = "/logo.png"; // ícone redondo (sem texto), usado no cabeçalho, rodapé e schema
+const LOGO_SRC = "/logo-completa.png"; // logo completa (cabeçalho, fundo claro)
+const LOGO_LIGHT_SRC = "/logo-completa-branca.png"; // logo completa com texto branco (rodapé, fundo escuro)
+const LOGO_ICON_SRC = "/logo.png"; // só o ícone redondo (schema/SEO)
 const SITE_URL = "https://selectaodonto.vnfdigital.com.br";
 const OG_IMAGE = `${SITE_URL}/images/foto-03.jpg`;
 
@@ -50,7 +52,7 @@ const SCHEMA_DENTIST = {
   name: "Selecta Odonto",
   url: SITE_URL,
   image: OG_IMAGE,
-  logo: `${SITE_URL}${LOGO_SRC}`,
+  logo: `${SITE_URL}${LOGO_ICON_SRC}`,
   description:
     "Clínica odontológica com atendimento humanizado no Passaré, Fortaleza: limpeza, facetas, implantes, canal, ortodontia e odontopediatria.",
   telephone: "+5585984058781",
@@ -225,15 +227,14 @@ function Index() {
       {/* HEADER */}
       <header className="sticky top-0 z-40 border-b bg-card/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-          <a href="#" className="flex items-center gap-2">
+          <a href="#" className="flex items-center" aria-label="Selecta Odonto — voltar ao topo">
             <img
               src={LOGO_SRC}
-              alt="Logo Selecta Odonto"
-              width={44}
-              height={44}
-              className="h-11 w-11 object-contain"
+              alt="Selecta Odonto"
+              width={134}
+              height={56}
+              className="h-12 w-auto object-contain md:h-14"
             />
-            <span className="font-display text-lg font-bold text-primary">Selecta Odonto</span>
           </a>
           <nav className="hidden items-center gap-6 md:flex">
             {NAV.map((item) => (
@@ -636,16 +637,14 @@ function Index() {
         <div className="mx-auto max-w-6xl px-4 py-10">
           <div className="grid gap-8 md:grid-cols-3">
             <div>
-              <div className="flex items-center gap-2">
-                <img
-                  src={LOGO_SRC}
-                  alt="Logo Selecta Odonto"
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 object-contain"
-                />
-                <span className="font-display text-lg font-bold">Selecta Odonto</span>
-              </div>
+              <img
+                src={LOGO_LIGHT_SRC}
+                alt="Selecta Odonto"
+                width={120}
+                height={50}
+                loading="lazy"
+                className="h-12 w-auto object-contain"
+              />
               <p className="mt-3 text-sm text-primary-foreground/70">
                 Odontologia humanizada no Passaré, Fortaleza.
               </p>
