@@ -586,7 +586,7 @@ function Index() {
                   alt="Logo Selecta Odonto"
                   className="h-9 w-9 rounded-full object-contain"
                 />
-                <span className="font-display text-lg font-bold">Selecta Odonto</span>
+                <span className="font-display text-lg font-bold">{"\n"}</span>
               </div>
               <p className="mt-3 text-sm text-primary-foreground/70">
                 Odontologia humanizada no Passaré, Fortaleza.
@@ -611,7 +611,7 @@ function Index() {
               <p className="mt-2">CNPJ: 00.000.000/0001-00</p>
               <p>CRO: 00000</p>
               <p className="mt-2 text-xs text-primary-foreground/60">
-                Fotos extraídas do perfil oficial no Google Maps.
+                {"\n"}
               </p>
             </div>
           </div>
