@@ -385,11 +385,7 @@ function Index() {
                 src={p.src}
                 alt={`Selecta Odonto — ${p.caption}`}
                 loading="lazy"
-                className={
-                  p.wide
-                    ? "h-full min-h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    : "aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                }
+                className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105 md:h-56"
               />
               <figcaption className="px-3 py-2 text-center text-xs font-medium text-muted-foreground">
                 {p.caption}
