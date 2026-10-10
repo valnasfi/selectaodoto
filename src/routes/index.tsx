@@ -71,15 +71,14 @@ const REVIEWS = [
   },
 ];
 
-const PHOTOS = [
+const PHOTOS: { src: string; caption: string; wide?: boolean }[] = [
   { src: "/images/foto-01.jpg", caption: "Sala de espera" },
   { src: "/images/foto-02.jpg", caption: "Recepção acolhedora" },
   { src: "/images/foto-03.jpg", caption: "Consultório moderno" },
   { src: "/images/foto-04.jpg", caption: "Ambiente confortável" },
   { src: "/images/foto-05.jpg", caption: "Nossa recepção" },
-  { src: "/images/foto-06.jpg", caption: "Selecta Odonto" },
   { src: "/images/foto-07.jpg", caption: "Nossa identidade" },
-  { src: "/images/foto-08.jpg", caption: "Sorrisos que transformam" },
+  { src: "/images/foto-08.jpg", caption: "Sorrisos que transformam", wide: true },
 ];
 
 const FAQ = [
@@ -363,8 +362,8 @@ function Index() {
           </div>
           <div className="overflow-hidden rounded-2xl shadow-lg">
             <img
-              src="/images/foto-06.jpg"
-              alt="Equipe Selecta Odonto — dentista no Passaré, Fortaleza"
+              src="/images/foto-01.jpg"
+              alt="Recepção da clínica Selecta Odonto — dentista no Passaré, Fortaleza"
               className="h-full w-full object-cover"
             />
           </div>
@@ -381,12 +380,16 @@ function Index() {
         </p>
         <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
           {PHOTOS.map((p) => (
-            <figure key={p.src} className="group overflow-hidden rounded-2xl border bg-card shadow-sm">
+            <figure key={p.src} className={`group overflow-hidden rounded-2xl border bg-card shadow-sm${p.wide ? " col-span-2" : ""}`}>
               <img
                 src={p.src}
                 alt={`Selecta Odonto — ${p.caption}`}
                 loading="lazy"
-                className="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className={
+                  p.wide
+                    ? "h-full min-h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    : "aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                }
               />
               <figcaption className="px-3 py-2 text-center text-xs font-medium text-muted-foreground">
                 {p.caption}
