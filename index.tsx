@@ -36,8 +36,7 @@ const WHATSAPP_URL =
 const MAPS_URL = "https://maps.google.com/?cid=14929066581155458468";
 const WAZE_URL = "https://waze.com/ul?ll=-3.8017977,-38.5344583&navigate=yes";
 const INSTAGRAM_URL = "https://instagram.com/selectaodonto";
-const LOGO_SRC = "/logo-icon.png"; // ícone redondo (cabeçalho e rodapé)
-const LOGO_FULL_SRC = "/logo.png"; // logo completa, com o nome (usada no schema/SEO)
+const LOGO_SRC = "/logo.png"; // ícone redondo (sem texto), usado no cabeçalho, rodapé e schema
 const SITE_URL = "https://selectaodonto.vnfdigital.com.br";
 const OG_IMAGE = `${SITE_URL}/images/foto-03.jpg`;
 
@@ -51,7 +50,7 @@ const SCHEMA_DENTIST = {
   name: "Selecta Odonto",
   url: SITE_URL,
   image: OG_IMAGE,
-  logo: `${SITE_URL}${LOGO_FULL_SRC}`,
+  logo: `${SITE_URL}${LOGO_SRC}`,
   description:
     "Clínica odontológica com atendimento humanizado no Passaré, Fortaleza: limpeza, facetas, implantes, canal, ortodontia e odontopediatria.",
   telephone: "+5585984058781",
@@ -230,7 +229,9 @@ function Index() {
             <img
               src={LOGO_SRC}
               alt="Logo Selecta Odonto"
-              className="h-10 w-10 rounded-full object-contain"
+              width={44}
+              height={44}
+              className="h-11 w-11 object-contain"
             />
             <span className="font-display text-lg font-bold text-primary">Selecta Odonto</span>
           </a>
@@ -639,7 +640,9 @@ function Index() {
                 <img
                   src={LOGO_SRC}
                   alt="Logo Selecta Odonto"
-                  className="h-9 w-9 rounded-full object-contain"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 object-contain"
                 />
                 <span className="font-display text-lg font-bold">Selecta Odonto</span>
               </div>
