@@ -36,7 +36,8 @@ const WHATSAPP_URL =
 const MAPS_URL = "https://maps.google.com/?cid=14929066581155458468";
 const WAZE_URL = "https://waze.com/ul?ll=-3.8017977,-38.5344583&navigate=yes";
 const INSTAGRAM_URL = "https://instagram.com/selectaodonto";
-const LOGO_SRC = "/logo.png";
+const LOGO_SRC = "/logo-completa.png";
+const LOGO_FOOTER_SRC = "/logo-completa-branca.png";
 
 const SERVICES = [
   { icon: Sparkles, title: "Limpeza e Profilaxia", desc: "Prevenção e saúde bucal em dia, com cuidado e gentileza." },
@@ -176,7 +177,7 @@ function Index() {
             <img
               src={LOGO_SRC}
               alt="Logo Selecta Odonto"
-              className="h-12 w-12 rounded-full object-contain"
+              className="h-10 w-auto object-contain md:h-12"
             />
           </a>
           <nav className="hidden items-center gap-6 md:flex">
@@ -580,13 +581,12 @@ function Index() {
         <div className="mx-auto max-w-6xl px-4 py-10">
           <div className="grid gap-8 md:grid-cols-3">
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center">
                 <img
-                  src={LOGO_SRC}
+                  src={LOGO_FOOTER_SRC}
                   alt="Logo Selecta Odonto"
-                  className="h-9 w-9 rounded-full object-contain"
+                  className="h-10 w-auto object-contain"
                 />
-                <span className="font-display text-lg font-bold">{"\n"}</span>
               </div>
               <p className="mt-3 text-sm text-primary-foreground/70">
                 Odontologia humanizada no Passaré, Fortaleza.
