@@ -35,6 +35,9 @@ const WHATSAPP_URL =
   "https://api.whatsapp.com/send/?phone=558584058781&text=Ol%C3%A1%2C+vim+pelo+site+da+Selecta+Odonto+e+quero+agendar+um+hor%C3%A1rio&type=phone_number&app_absent=0";
 const MAPS_URL = "https://maps.google.com/?cid=14929066581155458468";
 const WAZE_URL = "https://waze.com/ul?ll=-3.8017977,-38.5344583&navigate=yes";
+// Embed sem chave de API (não depende de restrição por referer).
+const MAP_EMBED_URL =
+  "https://maps.google.com/maps?q=Selecta%20Odonto%20R.%20Dois%20110%20A%20Passar%C3%A9%20Fortaleza%20CE&ll=-3.8017977,-38.5344583&z=17&output=embed";
 const INSTAGRAM_URL = "https://instagram.com/selectaodonto";
 const LOGO_SRC = "/logo-completa.png";
 const LOGO_FOOTER_SRC = "/logo-completa-branca.png";
@@ -149,12 +152,6 @@ function Index() {
   const [nome, setNome] = useState("");
   const [whats, setWhats] = useState("");
 
-  const mapsKey = import.meta.env["VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY"] as
-    | string
-    | undefined;
-  const mapEmbedUrl = mapsKey
-    ? `https://www.google.com/maps/embed/v1/place?key=${mapsKey}&q=place_id:ChIJ4fuvqaRPxwcRpC3tPfWyLs8`
-    : null;
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -423,25 +420,14 @@ function Index() {
         </h2>
         <div className="mt-10 grid gap-8 md:grid-cols-2">
           <div className="overflow-hidden rounded-2xl border shadow-sm">
-            {mapEmbedUrl ? (
-              <iframe
-                title="Mapa da Selecta Odonto no Google Maps"
-                src={mapEmbedUrl}
-                className="h-full min-h-[320px] w-full"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
-              />
-            ) : (
-              <a
-                href={MAPS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-full min-h-[320px] items-center justify-center bg-secondary text-primary font-semibold"
-              >
-                Abrir mapa no Google Maps
-              </a>
-            )}
+            <iframe
+              title="Mapa da Selecta Odonto no Google Maps"
+              src={MAP_EMBED_URL}
+              className="h-full min-h-[320px] w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
           <div className="flex flex-col justify-center">
             <div className="space-y-4">
